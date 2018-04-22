@@ -12,6 +12,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        {{-- Link para llamar los css de Boostrap --}}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <!-- Styles -->
     </head>
@@ -27,12 +28,13 @@
                     @endif
                 </div>
             @endif
-
-            <div class="content">
+            {{-- El contenedor es propio de boostrap para realizar el responsive --}}
+            <div class="container">
                 {{-- Seccion que insertaremos desde otro archivo --}}
-                @yield('content'); 
+                @yield('content')
             </div>
         </div>
+    {{-- Link para llamar a Boostrap --}}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     </body>
 </html>
