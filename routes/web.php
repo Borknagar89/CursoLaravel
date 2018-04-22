@@ -11,17 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	$links = [
-		'https://platzi.com/laravel' => 'Curso de Laravel',
-		'https://laravel.com' => 'Pagina de Laravel'
-	];
-    return view('welcome', [
-    	//'teacher' => 'Guido Contreras',
-    	'links' => $links,
-    ]);
-});
+/* Busca en la clase home en /App/Http/Controllers/PagesController.php */
+Route::get('/', 'PagesController@home'); 
 
-Route::get('/acerca', function (){
-	return view('about');
-});
+Route::get('/acerca', 'PagesController@aboutUs');
